@@ -5,12 +5,25 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #663399;
+    --secondary-color: #7f53ac;
+    --tertiary-color: #657ced;
+}
+
+.dark-mode {
+    --primary-color: #212022;
+    --secondary-color: #1b1b1b;
+    --tertiary-color: #727272;
+}
+
 body{
     height: 100vh;
     background: linear-gradient(
         to right,
-        #7f53ac,
-        #657ced
+        var(--secondary-color),
+        var(--tertiary-color)
     );
 }
 .container{
@@ -27,6 +40,31 @@ body{
     justify-items: center;
     font-family: 'Poppins',sans-serif;
 }
+
+.icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    fill: var(--primary-color);
+    stroke: var(--primary-color);
+}
+
+.icon:active {
+    transform: scale(0.97);
+}
+
+.hidden {
+    display: none;
+}
+
 h3{
     font-size: 16px;
     font-weight: 600;
@@ -34,7 +72,7 @@ h3{
 input[type="text"]{
     width: 90px;
     font-weight: 600;
-    color: #663399;
+    color: var(--primary-color);
     padding: 20px 0;
     text-align: center;
     margin-top: 30px;
@@ -46,7 +84,7 @@ button{
     width: 160px;
     padding: 15px 0;
     border-radius: 5px;
-    background-color: #663399;
+    background-color: var(--primary-color);
     color: #ffffff;
     border: none;
     font-size: 18px;
@@ -55,6 +93,11 @@ button{
     outline: none;
     cursor: pointer;
 }
+
+button:active {
+    transform: scale(0.97);
+}
+
 p{
     font-weight: 400;
 }
