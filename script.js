@@ -1,6 +1,7 @@
 var msg1 = document.getElementById("message1");
 var msg2 = document.getElementById("message2");
 var msg3 = document.getElementById("message3");
+var icon = document.querySelector(".icon");
 
 var range = prompt("Enter the range of number")
 document.getElementById("range").innerHTML = range
@@ -37,4 +38,10 @@ function play(){
             document.getElementById("my_btn").disabled = true;
         }
     }
+}
+
+icon1.onclick = icon2.onclick = function() {
+    document.body.classList.toggle("dark-mode");
+    icon1.classList.toggle("hidden");
+    icon2.classList.toggle("hidden");
 }
